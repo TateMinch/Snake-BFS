@@ -1,0 +1,53 @@
+April 7th:
+* Downloaded startup code
+* Made new repo called csc315_spr2021_Snake
+* Compiled and ran startup code
+* Made first commit of startup source
+
+April 8th:
+* Started looking around at player and application interface
+* wrote files for BFSPaths class and Graph conversion class
+* TRIED implementing BFS, was not considering that the first node in the list
+* is the head node
+* BFS still needs to be implented, current player is the simple player
+
+April 9th:
+* Added BFS functionality to player, currently scoring much higher than simple player
+* Need to work on objective function for when the tail gets long enough to partition
+* the playfield and path to food is not available. Still using simple player logic there.
+
+April 10th:
+* Wrote some simple code for when there is no bfs path available so snake does not just run into
+* itself or obstacles. Not a lot of logic in it, just makes a random valid move while there is one to make so
+* there is at least a chance of a path opening up. Still gets itself stuck in certain situatuations though.
+* Also added avoidance of obstacles in objective code
+
+April 12th:
+* Attempted to add DFS functionality so that the snake might take a longer path and avoid getting stuck in itself 
+* so fast. This didn't even kind of work, it was performing DFS on each move and it was repeating moves back and forth
+* so it just got stuck in an infinite loop
+
+April 15th:
+* Implemented a variable called tempCount that just incremented if one of the cells surrounding the food was an obstacle
+* or its tail. The idea here was to make it to where the player class only performs the BFS search and makes such a move
+* iff the food is not surrounded by obstacles to ensure the head of the snake can escape from that spot. I am not sure how
+* effective it actually is.
+
+April 20th: 
+* Tried switching up the order of the random moves. Didn't do much. Also tried doing bfs towards the end of the tail if 
+* the grid was partitioned but that didn't seem to help anything. I thought it might make it coil
+
+April 21st:
+* Tried implementing bridge class so that if one of the moves it was going to make could not be returned from after the grid
+* was partioned, then the move would not be made. This didn't really work, so again I am a bit stuck.
+
+April 25th:
+* Tried implenting AStar to see if it makes smarter decisions in its path to the food and may partition the grid slower leading 
+* to higher scores. Having some trouble with implentation.
+
+April 27th:
+* Still trying to impliment Astar but I am struggling with it.
+
+April 29th: 
+* Worked again on impleneting Astar and documentation. Finally pushed even though code really hasnt changed at all. Getting close
+* to giving up on Astar. 
